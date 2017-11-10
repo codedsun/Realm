@@ -10,6 +10,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Realm realm = Realm.getDefaultInstance();
+        Todo todo = new Todo();
+        todo.setTaskId(1);
+        todo.setTaskName("Todo App");
+        todo.setTaskDescription("Checking the app");
+        realm.beginTransaction();
+        realm.commitTransaction();
 
 
     }
